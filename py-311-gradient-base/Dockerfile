@@ -13,8 +13,6 @@ RUN rm -rf /usr/local/bin/python3 /usr/local/bin/python && \
 
 ENV PATH=$PATH:/root/.local/bin
 
-
-
 # ==================================================================
 # PyTorch
 # ------------------------------------------------------------------
@@ -81,6 +79,11 @@ RUN $PIP_INSTALL \
 RUN pip install -U git+https://github.com/huggingface/transformers
 
 RUN pip install --pre scikit-learn
+
+RUN pip install -U \ 
+    openai==1.4.0 \
+    langchain==0.0.350 \
+    gradio==4.10.0
 
 EXPOSE 8888 6006
 
