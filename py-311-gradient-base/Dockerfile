@@ -39,7 +39,7 @@ RUN $PIP_INSTALL datasets
 # JupyterLab
 # ------------------------------------------------------------------
 # Based on https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html#pip
-RUN $PIP_INSTALL jupyterlab
+RUN $PIP_INSTALL jupyterlab jupyterlab-git jupyter-resource-usage jupyterlab-vim
 # ==================================================================
 # Additional Python Packages
 # ------------------------------------------------------------------
